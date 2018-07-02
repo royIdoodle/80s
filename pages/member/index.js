@@ -4,7 +4,7 @@ const app = getApp();
 
 Page({
     data: {
-        current: 'homepage'
+        current: 'member'
     },
     handleChange ({ detail }) {
         this.setData({

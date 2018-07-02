@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-button": "/weapp/button/index",
+    "i-icon": "/weapp/icon/index",
+    "i-tab-bar": "/weapp/tab-bar/index",
+    "i-tab-bar-item": "/weapp/tab-bar-item/index",
+    "i-input": "/weapp/input/index"
+  }
+}

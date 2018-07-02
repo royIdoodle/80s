@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents":
+  {
+    "i-tab-bar": "/weapp/tab-bar/index",
+    "i-tab-bar-item": "/weapp/tab-bar-item/index"
+  }
+}
