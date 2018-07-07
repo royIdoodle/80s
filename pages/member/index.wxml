@@ -1,6 +1,21 @@
 <!--index.wxml-->
 <view class="container">
-    <i-input value="{{ value6 }}" type="number" right title="消费总额" mode="wrapped" placeholder="询问收银员后输入" />
+    <!--搜索框-->
+    <i-input value="{{ value6 }}"
+             type="number" left
+             mode="phone" placeholder="输入手机号搜索会员" />
+
+    <!--会员列表-->
+    <i-card wx:for="{{memberList}}"
+            wx:key="{{item.phone}}"
+            class="card-item"
+            title="{{item.name}}" extra="点击查看" thumb="../../static/avatar.png">
+        <view slot="content">{{item.phone}}</view>
+        <view slot="footer">卡类型：{{item.cardTypeStr}}</view>
+    </i-card>
+
+
+    <!--底部导航-->
     <i-tab-bar current="{{ current }}" bindchange="handleChange" class="bottom-nav">
         <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
         <i-tab-bar-item key="member" icon="group" current-icon="group_fill" title="会员"></i-tab-bar-item>
