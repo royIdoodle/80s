@@ -9,6 +9,8 @@
     <i-card wx:for="{{memberList}}"
             wx:key="{{item.phone}}"
             class="card-item"
+            data-phone="{{item.phone}}"
+            bindtap="toDetail"
             title="{{item.name}}" extra="点击查看" thumb="../../static/avatar.png">
         <view slot="content">{{item.phone}}</view>
         <view slot="footer">卡类型：{{item.cardTypeStr}}</view>
@@ -22,4 +24,5 @@
         <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" count="3" title="消息"></i-tab-bar-item>
         <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" dot title="我的"></i-tab-bar-item>
     </i-tab-bar>
+    <i-toast id="toast" />
 </view>

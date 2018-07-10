@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp();
 const {DOMAIN} = require('../../utils/config');
+const { $Toast } = require('../../weapp/base/index');
 
 Page({
     data: {
@@ -17,6 +18,13 @@ Page({
     //翻页
     onReachBottom: function(){
         this.queryMemberList();
+    },
+    toDetail({currentTarget}){
+        const {dataset} = currentTarget,
+            {phone} = dataset;
+        wx.navigateTo({
+            url: '../memberDetail/index?phone='+phone
+        })
     },
     queryMemberList: function () {
         let that = this;
