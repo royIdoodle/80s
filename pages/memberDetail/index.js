@@ -6,19 +6,18 @@ const { $Toast } = require('../../weapp/base/index');
 
 Page({
     data: {
-        current: 'member',
-        phone: '',
-        memberList: [],
-        currentPage: 0
+        id: ''
     },
-    onLoad: function () {
-        //查询会员详情
-        $Toast({
-            content: '警告的提示',
-            type: 'warning'
-        });
+    onLoad: function (option) {
+        this.data.id = option.id;
+        this.queryMemberDetail(this.data.id);
     },
-    queryMemberDetail(phone){
-
+    queryMemberDetail(id){
+        wx.request({
+            url: `${DOMAIN}/member/get/${id}`,
+            success({data}){
+                console.log(data)
+            }
+        })
     }
 });

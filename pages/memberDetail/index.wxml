@@ -1,6 +1,10 @@
 <!--index.wxml-->
 <view class="container">
     <!--搜索框-->
+    <span>姓名</span>
+    <i-input mode="wrapped"></i-input>
+
+
 
     <i-toast id="toast" />
 </view>

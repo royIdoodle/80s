@@ -21,9 +21,10 @@ Page({
     },
     toDetail({currentTarget}){
         const {dataset} = currentTarget,
-            {phone} = dataset;
+            {id} = dataset;
+        //跳转到会员详情页
         wx.navigateTo({
-            url: '../memberDetail/index?phone='+phone
+            url: '../memberDetail/index?id='+id
         })
     },
     queryMemberList: function () {
@@ -38,7 +39,6 @@ Page({
                     memberList: that.data.memberList,
                     currentPage: ++that.data.currentPage
                 });
-                console.log(data.data);
             }
         })
     }

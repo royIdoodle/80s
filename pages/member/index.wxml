@@ -9,7 +9,7 @@
     <i-card wx:for="{{memberList}}"
             wx:key="{{item.phone}}"
             class="card-item"
-            data-phone="{{item.phone}}"
+            data-id="{{item._id}}"
             bindtap="toDetail"
             title="{{item.name}}" extra="点击查看" thumb="../../static/avatar.png">
         <view slot="content">{{item.phone}}</view>
