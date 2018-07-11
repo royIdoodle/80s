@@ -1,12 +1,34 @@
 <!--index.wxml-->
 <view class="container">
-    <i-panel title="会员信息">
-        <i-input value="{{ value1 }}" title="姓名" autofocus placeholder="名字" />
-        <i-input value="{{ value2 }}" type="number" title="电话" placeholder="请输入手机号" />
-        <i-input value="{{ value3 }}" type="textarea" title="详细地址" placeholder="请输入详细地址(最多50字)" maxlength="50" />
-        <i-input value="{{ value4 }}" title="用户信息" disabled />
+    <!--标签-->
+    <i-tabs current="{{ currentTab }}" bindchange="tabChangeHandler">
+        <i-tab key="consume" title="消费相关"></i-tab>
+        <i-tab key="info" title="基本信息"></i-tab>
+    </i-tabs>
+
+    <!--消费记录-->
+    <i-panel wx:if="{{currentTab === 'consume'}}">
+        <i-input title="账户余额" value="{{balance}}" disabled></i-input>
+        <i-input title="消费次数" value="{{consumeCount}}" disabled></i-input>
+
     </i-panel>
 
+    <!--会员信息-->
+    <i-panel wx:if="{{currentTab === 'info'}}">
+        <i-input value="{{ name }}" type="text" title="姓名" placeholder="请输入会员姓名" />
+        <i-input value="{{ phone }}" type="number" title="电话" placeholder="请输入手机号" />
+        <i-input value="{{age}}" title="年龄" type="number" placeholder="请输入年龄" />
+        <i-radio-group bindchange="sexChangeHandler" class="form-item">
+            <view class="float-left form-title">性别</view>
+            <i-radio value="男" data-sex="male" checked="{{sex==='male'}}" class="float-left"></i-radio>
+            <i-radio value="女" data-sex="female" checked="{{sex==='female'}}" class="float-left"></i-radio>
+        </i-radio-group>
+        <i-button type="primary" size="small">保存信息</i-button>
+    </i-panel>
 
+    <view class="form-item bottom-button-container" wx:if="{{currentTab === 'consume'}}">
+        <i-button type="primary" size="small" class="bottom-button">充值</i-button>
+        <i-button type="warning" size="small" class="bottom-button">消费</i-button>
+    </view>
     <i-toast id="toast" />
 </view>

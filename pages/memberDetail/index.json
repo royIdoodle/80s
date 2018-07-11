@@ -9,6 +9,10 @@
     "i-cell": "/weapp/cell/index",
     "i-card": "/weapp/card/index",
     "i-toast": "/weapp/toast/index",
-    "i-panel": "/weapp/panel/index"
+    "i-panel": "/weapp/panel/index",
+    "i-radio-group": "/weapp/radio-group/index",
+    "i-radio": "/weapp/radio/index",
+    "i-tabs": "/weapp/tabs/index",
+    "i-tab": "/weapp/tab/index"
   }
 }
