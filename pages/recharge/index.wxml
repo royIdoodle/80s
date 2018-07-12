@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+    <i-panel>
+        <i-input title="金额"
+                 type="number"
+                 bindinput="numberChange"
+                 placeholder="请输入充值金额"></i-input>
+        <i-input title="测试"></i-input>
+
+    </i-panel>
+
+    <i-toast id="toast" />
+</view>

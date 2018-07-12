@@ -1,0 +1,18 @@
+{
+  "usingComponents": {
+    "i-button": "/weapp/button/index",
+    "i-icon": "/weapp/icon/index",
+    "i-tab-bar": "/weapp/tab-bar/index",
+    "i-tab-bar-item": "/weapp/tab-bar-item/index",
+    "i-input": "/weapp/input/index",
+    "i-cell-group": "/weapp/cell-group/index",
+    "i-cell": "/weapp/cell/index",
+    "i-card": "/weapp/card/index",
+    "i-toast": "/weapp/toast/index",
+    "i-panel": "/weapp/panel/index",
+    "i-radio-group": "/weapp/radio-group/index",
+    "i-radio": "/weapp/radio/index",
+    "i-tabs": "/weapp/tabs/index",
+    "i-tab": "/weapp/tab/index"
+  }
+}

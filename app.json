@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/member/index",
     "pages/memberDetail/index",
-    "pages/logs/logs"
+    "pages/recharge/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

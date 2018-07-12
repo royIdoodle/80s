@@ -21,6 +21,9 @@ Page({
     },
     onLoad: function (option) {
         this.data.id = option.id;
+        this.setData({
+            id: option.id
+        });
         this.queryMemberDetail(this.data.id);
     },
     queryMemberDetail(id){
@@ -30,11 +33,12 @@ Page({
             success({data}){
                 const detail = data.data,
                     {name, phone, sex, age,
-                        consumeCount
+                        consumeCount, balance
                     } = detail;
                 that.setData({
                     name, phone, sex, age,
-                    consumeCount
+                    consumeCount,
+                    balance: `${balance}元`
                 })
             }
         })
@@ -50,5 +54,8 @@ Page({
         this.setData({
             currentTab: detail.key
         })
+    },
+    toCharge(){
+        wx.navigateTo({url: '../recharge/index?id='+this.data.id})
     }
 });
