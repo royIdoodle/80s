@@ -21,8 +21,6 @@
     <i-tab-bar current="{{ current }}" bindchange="handleChange" class="bottom-nav">
         <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
         <i-tab-bar-item key="member" icon="group" current-icon="group_fill" title="会员"></i-tab-bar-item>
-        <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" count="3" title="消息"></i-tab-bar-item>
-        <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" dot title="我的"></i-tab-bar-item>
     </i-tab-bar>
     <i-toast id="toast" />
 </view>
