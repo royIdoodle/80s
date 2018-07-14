@@ -3,6 +3,7 @@
 const app = getApp();
 const {DOMAIN} = require('../../utils/config');
 const { $Toast } = require('../../weapp/base/index');
+const api = require('../../utils/api');
 
 Page({
     data: {
@@ -28,18 +29,16 @@ Page({
         })
     },
     queryMemberList: function () {
-        let that = this;
-        const page = that.data.currentPage,
+        const page = this.data.currentPage,
             count = 10;
-        wx.request({
-            url: `${DOMAIN}/member/list/${page}/${count}`,
-            success({data}){
-                that.data.memberList = that.data.memberList.concat(data.data);
-                that.setData({
-                    memberList: that.data.memberList,
-                    currentPage: ++that.data.currentPage
-                });
-            }
-        })
+        api.request({
+            url: `/member/list/${page}/${count}`
+        }).then(data => {
+            this.data.memberList = this.data.memberList.concat(data);
+            this.setData({
+                memberList: this.data.memberList,
+                currentPage: ++this.data.currentPage
+            });
+        });
     }
 });

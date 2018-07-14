@@ -3,6 +3,7 @@
 const app = getApp();
 const {DOMAIN} = require('../../utils/config');
 const { $Toast } = require('../../weapp/base/index');
+const api = require('../../utils/api');
 
 Page({
     data: {
@@ -27,21 +28,19 @@ Page({
         this.queryMemberDetail(this.data.id);
     },
     queryMemberDetail(id){
-        let that = this;
-        wx.request({
-            url: `${DOMAIN}/member/get/${id}`,
-            success({data}){
-                const detail = data.data,
-                    {name, phone, sex, age,
-                        consumeCount, balance
-                    } = detail;
-                that.setData({
-                    name, phone, sex, age,
-                    consumeCount,
-                    balance: `${balance}元`
-                })
-            }
-        })
+        api.request({
+            url: `/member/get/${id}`
+        }).then((data) => {
+            const detail = data,
+                {name, phone, sex, age,
+                    consumeCount, balance
+                } = detail;
+            this.setData({
+                name, phone, sex, age,
+                consumeCount,
+                balance: `${balance}元`
+            })
+        });
     },
     sexChangeHandler(e){
         const {detail} = e,

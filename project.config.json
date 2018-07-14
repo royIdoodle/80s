@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -51,10 +51,10 @@
 					"query": "id=5b3e1c77859b730ed3a48e31"
 				},
 				{
-					"id": -1,
+					"id": 3,
 					"name": "充值页",
 					"pathName": "pages/recharge/index",
-					"query": ""
+					"query": "id=5b3e2cf3898c491158e8ed74"
 				}
 			]
 		}
