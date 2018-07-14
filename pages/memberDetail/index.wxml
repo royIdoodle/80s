@@ -15,28 +15,39 @@
 
     <!--会员信息-->
     <i-panel wx:if="{{currentTab === 'info'}}">
-        <i-input value="{{ name }}" type="text" title="姓名" placeholder="请输入会员姓名" />
-        <i-input value="{{ phone }}" type="number" title="电话" placeholder="请输入手机号" />
-        <i-input value="{{age}}" title="年龄" type="number" placeholder="请输入年龄" />
+        <i-input value="{{ name }}"
+                 type="text" title="姓名"
+                 bindchange="nameChange"
+                 placeholder="请输入会员姓名" />
+        <i-input value="{{ phone }}" type="number"
+                 bindchange="phoneChange"
+                 title="电话" placeholder="请输入手机号" />
+        <i-input value="{{age}}" title="年龄"
+                 bindchange="ageChange"
+                 type="number" placeholder="请输入年龄" />
         <i-radio-group bindchange="sexChangeHandler" class="form-item" current="{{sexStr}}">
             <view class="float-left form-title">性别</view>
             <i-radio value="男" data-sex="male" checked="{{sex==='male'}}" class="float-left"></i-radio>
             <i-radio value="女" data-sex="female" checked="{{sex==='female'}}" class="float-left"></i-radio>
         </i-radio-group>
-        <i-button type="primary" size="small">保存信息</i-button>
+        <i-button type="primary" size="small" bindtap="saveMember">保存信息</i-button>
     </i-panel>
 
     <!--消费列表-->
-    <i-panel class="cell-panel-demo" wx:for="{{consumeList}}" wx:key="{{item._id}}">
+    <i-panel class="cell-panel-demo"
+             wx:if="{{currentTab === 'consume'}}"
+             wx:for="{{consumeList}}" wx:key="{{item._id}}">
         <i-cell title="{{item.type}}" label="{{item.time}}" value="{{item.count}}"></i-cell>
     </i-panel>
-
+    <view style="height: 200rpx;"></view>
 
     <view class="form-item bottom-button-container" wx:if="{{currentTab === 'consume'}}">
         <i-button type="primary"
                   bindtap="toCharge"
                   size="small" class="bottom-button">充值</i-button>
-        <i-button type="warning" size="small" class="bottom-button">消费</i-button>
+        <i-button type="warning" size="small"
+                  bindtap="toAddConsume"
+                  class="bottom-button">消费</i-button>
     </view>
     <i-toast id="toast" />
 </view>

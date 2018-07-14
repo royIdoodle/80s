@@ -99,5 +99,49 @@ Page({
     },
     toCharge(){
         wx.navigateTo({url: '../recharge/index?id='+this.data.id})
+    },
+    nameChange({detail}){
+        const {value} = detail.detail;
+        this.data.name = value;
+        this.setData({
+            name: this.data.name
+        })
+    },
+    phoneChange({detail}){
+        const {value} = detail.detail;
+        this.data.phone = value;
+        this.setData({
+            phone: this.data.phone
+        })
+    },
+    ageChange({detail}){
+        const {value} = detail.detail;
+        this.data.age = value;
+        this.setData({
+            age: this.data.age
+        })
+    },
+    //更新用户信息
+    saveMember(){
+        api.request({
+            url: `/member/edit/${this.data.id}`,
+            method: 'post',
+            data: {
+                name: this.data.name,
+                phone: this.data.phone,
+                sex: this.data.sex,
+                age: this.data.age
+            }
+        }).then(() => {
+            $Toast({
+                content: '更新成功',
+                type: 'success'
+            })
+        })
+    },
+    toAddConsume(){
+        wx.navigateTo({
+            url: '../addConsume/index?id='+this.data.id
+        });
     }
 });

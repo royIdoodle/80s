@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+    <i-panel>
+        <i-input value="{{ count }}"
+                 type="number" title="消费金额"
+                 bindchange="countChange"
+                 placeholder="请输入消费金额（或次数）" ></i-input>
+        <i-radio-group bindchange="typeChangeHandler"
+                       class="form-item" current="{{typeStr}}">
+            <view class="float-left form-title">消费类型</view>
+            <i-radio value="理发"></i-radio>
+            <i-radio value="烫染"></i-radio>
+            <i-radio value="购物"></i-radio>
+            <i-radio value="其他"></i-radio>
+        </i-radio-group>
+        <i-input value="{{content}}"
+                 title="消费内容" bindchange="contentChange"
+                 placeholder="请输入详细消费内容"></i-input>
+        <i-button type="warning" size="small" bindtap="addConsume">添加消费</i-button>
+    </i-panel>
+    <i-toast id="toast" />
+</view>

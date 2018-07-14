@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
@@ -55,6 +55,12 @@
 					"name": "充值页",
 					"pathName": "pages/recharge/index",
 					"query": "id=5b3e2cf3898c491158e8ed74"
+				},
+				{
+					"id": -1,
+					"name": "添加消费",
+					"pathName": "pages/addConsume/index",
+					"query": "id=5b3e1c77859b730ed3a48e31"
 				}
 			]
 		}

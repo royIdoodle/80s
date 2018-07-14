@@ -7,7 +7,6 @@
                  bindchange="numberChange"
                  placeholder="请输入充值金额"></i-input>
     </i-panel>
-    <view>{{deb}}</view>
     <i-toast id="toast" />
     <i-button type="primary" size="small" bindtap="confirm">充值</i-button>
 </view>

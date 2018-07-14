@@ -1,0 +1,33 @@
+/**index.wxss**/
+.container {
+  width: 100%;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  padding:7px 15px;
+  color:#495060;
+
+  position:relative;
+  background:#fff;
+  line-height:1.4;
+  font-size:14px;
+  overflow:hidden;
+}
+.float-left {
+  float: left;
+}
+
+.form-title {
+  color:#495060;
+  min-width:65px;
+  padding-right:10px;
+
+}

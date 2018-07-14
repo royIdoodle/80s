@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/member/index",
     "pages/memberDetail/index",
-    "pages/recharge/index"
+    "pages/recharge/index",
+    "pages/addConsume/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
