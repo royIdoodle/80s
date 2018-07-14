@@ -7,7 +7,8 @@ const api = require('../../utils/api');
 Page({
     data: {
         memberId: '',
-        number: ''
+        number: '',
+        deb: ''
     },
     onLoad: function (option) {
         this.data.memberId = option.id;
@@ -15,9 +16,9 @@ Page({
             memberId: this.data.memberId
         })
     },
-    numberChange(e){
-        $Toast({
-            content: '输入！'+JSON.stringify(e)
+    numberChange({detail}){
+        this.setData({
+            number: detail.detail.value
         })
     },
     confirm(){
@@ -31,7 +32,18 @@ Page({
                 shopId: 1
             }
         }).then(data => {
-            console.log(data);
-        });
+            $Toast({
+                content: '充值成功！',
+                type: 'success'
+            });
+            setTimeout(() => {
+                wx.navigateBack();
+            }, 500)
+        }).catch(err => {
+            $Toast({
+                content: JSON.stringify(err),
+                type: 'warning'
+            })
+        })
     }
 });
