@@ -10,6 +10,11 @@ Page({
         this.setData({
             current: detail.key
         });
+        if(detail.key === 'member'){
+            wx.redirectTo({
+                url: '../member/index'
+            })
+        }
     },
     onLoad: function () {
 

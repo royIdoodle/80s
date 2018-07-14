@@ -16,6 +16,16 @@ Page({
         //查询会员
         this.queryMemberList();
     },
+    handleChange ({ detail }) {
+        this.setData({
+            current: detail.key
+        });
+        if(detail.key === 'homepage'){
+            wx.redirectTo({
+                url: '../index/index'
+            })
+        }
+    },
     //翻页
     onReachBottom: function(){
         this.queryMemberList();
