@@ -60,6 +60,13 @@ Page({
         });
         this.queryMemberDetail(this.data.id);
     },
+    onPullDownRefresh: function(){
+        this.queryMemberDetail(this.data.id)
+        wx.stopPullDownRefresh()
+    },
+    onShow(){
+        this.queryMemberDetail(this.data.id)
+    },
     queryMemberDetail(id){
         //请求会员基本信息
         api.request({

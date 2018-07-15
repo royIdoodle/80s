@@ -14,5 +14,8 @@
     "i-radio": "/weapp/radio/index",
     "i-tabs": "/weapp/tabs/index",
     "i-tab": "/weapp/tab/index"
+  },
+  "window": {
+    "enablePullDownRefresh": true
   }
 }
