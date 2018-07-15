@@ -23,6 +23,13 @@ Page({
     },
     confirm(){
         const id = this.data.memberId;
+        if(!this.data.number){
+            $Toast({
+                content: '充值金额不得为空！',
+                type: 'warning'
+            });
+            return
+        }
         api.request({
             url: `/member/recharge/${id}`,
             method: 'post',

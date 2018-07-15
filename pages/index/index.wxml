@@ -1,7 +1,13 @@
 <!--index.wxml-->
 <view class="container">
-  <i-tab-bar current="{{ current }}" bindchange="handleChange" class="bottom-nav">
-      <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
-      <i-tab-bar-item key="member" icon="group" current-icon="group_fill" title="会员"></i-tab-bar-item>
-  </i-tab-bar>
+    <i-panel>
+        <i-button type="primary" size="small" bindtap="toAddMember">
+            <i-icon type="add" size="24" color="#ffffff"/>
+            添加会员
+        </i-button>
+    </i-panel>
+    <i-tab-bar current="{{ current }}" bindchange="handleChange" class="bottom-nav">
+        <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+        <i-tab-bar-item key="member" icon="group" current-icon="group_fill" title="会员"></i-tab-bar-item>
+    </i-tab-bar>
 </view>

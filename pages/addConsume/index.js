@@ -17,7 +17,7 @@ Page({
         id: '',
         typeStr: '理发',
         type: 'haircut',
-        count: 0,
+        count: 10,
         content: ''
     },
     onLoad: function (options) {

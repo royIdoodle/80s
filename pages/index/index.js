@@ -19,4 +19,9 @@ Page({
     onLoad: function () {
 
     },
+    toAddMember(){
+        wx.navigateTo({
+            url: '../addMember/index'
+        })
+    }
 });
