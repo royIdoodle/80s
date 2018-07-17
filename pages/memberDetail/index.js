@@ -58,7 +58,7 @@ Page({
         this.setData({
             id: option.id
         });
-        this.queryMemberDetail(this.data.id);
+        // this.queryMemberDetail(this.data.id);
     },
     onPullDownRefresh: function(){
         this.queryMemberDetail(this.data.id)

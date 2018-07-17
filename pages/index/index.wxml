@@ -5,6 +5,10 @@
             <i-icon type="add" size="24" color="#ffffff"/>
             添加会员
         </i-button>
+        <i-button type="primary" size="small" bindtap="testHandler">
+            <i-icon type="add" size="24" color="#ffffff"/>
+            登录
+        </i-button>
     </i-panel>
     <i-tab-bar current="{{ current }}" bindchange="handleChange" class="bottom-nav">
         <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>

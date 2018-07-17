@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp();
+const api = require('../../utils/api');
 
 Page({
     data: {
@@ -23,5 +24,8 @@ Page({
         wx.navigateTo({
             url: '../addMember/index'
         })
+    },
+    testHandler(){
+
     }
 });

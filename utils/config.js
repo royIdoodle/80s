@@ -3,7 +3,7 @@ const ENV = {
     PRODUCTION: 'production'
 };
 
-const ENV_VAL = ENV.PRODUCTION;      //dev / production
+const ENV_VAL = ENV.DEV;      //dev / production
 
 let DOMAIN = '';
 
