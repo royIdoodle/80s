@@ -47,6 +47,7 @@ Page({
         name: '',
         phone: '',
         age: 30,
+        cardNo: '',
 
     //    消费信息
         consumeCount: 0,
@@ -119,6 +120,13 @@ Page({
         this.data.phone = value;
         this.setData({
             phone: this.data.phone
+        })
+    },
+    cardNoChange({detail}){
+        const {value} = detail.detail;
+        this.data.cardNo = value;
+        this.setData({
+            cardNo: this.data.cardNo
         })
     },
     ageChange({detail}){

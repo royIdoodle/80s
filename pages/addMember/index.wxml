@@ -8,6 +8,9 @@
         <i-input value="{{ phone }}" type="number"
                  bindchange="phoneChange"
                  title="电话" placeholder="请输入手机号"></i-input>
+        <i-input value="{{ cardNo }}" type="number"
+                 bindchange="cardNoChange"
+                 title="卡号" placeholder="请输入会员卡号"></i-input>
         <i-input value="{{age}}" title="年龄"
                  bindchange="ageChange"
                  type="number" placeholder="请输入年龄"></i-input>

@@ -14,6 +14,7 @@ Page({
         sexStr: '男',
         name: '',
         phone: '',
+        cardNo: '',
         age: ''
     },
     onLoad: function (option) {
@@ -46,6 +47,13 @@ Page({
         this.data.age = value;
         this.setData({
             age: this.data.age
+        })
+    },
+    cardNoChange({detail}){
+        const {value} = detail.detail;
+        this.data.cardNo = value;
+        this.setData({
+            cardNo: this.data.cardNo
         })
     },
     addMember(){
