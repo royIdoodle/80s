@@ -70,6 +70,7 @@ Page({
             data: {
                 name: this.data.name,
                 age: this.data.age,
+                cardNo: this.data.cardNo,
                 phone: this.data.phone,
                 sex: this.data.sex
             }

@@ -74,10 +74,10 @@ Page({
             url: `/member/get/${id}`
         }).then((data) => {
             const {name, phone, sex, age,
-                    balance
+                    balance, cardNo
                 } = data;
             this.setData({
-                name, phone, sex, age, sexStr: SEX_MAP[sex],
+                name, phone, sex, age, cardNo, sexStr: SEX_MAP[sex],
                 balance: `${balance}元`
             })
         });
@@ -144,6 +144,7 @@ Page({
             data: {
                 name: this.data.name,
                 phone: this.data.phone,
+                cardNo: this.data.cardNo,
                 sex: this.data.sex,
                 age: this.data.age
             }
